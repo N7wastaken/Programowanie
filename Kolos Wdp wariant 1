@@ -4,24 +4,19 @@ using namespace std;
 
 void zadanie1(){
 	
-	double a;
-	double b;
-	double c;
-	cin>>a;
-	cin>>b;
-	cin>>c;
+	double a,b,c;
+	cin>>a,b,c;
 	
 	double naj = max(a, b);
-	double wieksz = max(naj,c);
-	cout<<wieksz;
+	double najnaj = max(naj,c);
+	
+	cout<<najnaj;
 	
 }
 
 void zadanie2(){
 	
-	double a;
-	double b;
-	double c;
+	double a,b,c;
 	cin>>a;
 	cin>>b;
 	cin>>c;
@@ -37,12 +32,9 @@ void zadanie2(){
 	
 	void zadanie3(){
 	
-	double a;
-	double b;
-	double c;
-	cin>>a;
-	cin>>b;
-	cin>>c;
+	double a,b,c;
+	cin>>a,b,c;
+	
 	if(a<0){
 		 a = -a;
 	}
