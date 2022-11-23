@@ -1,0 +1,256 @@
+#include<iostream>
+#include<string>
+#include<cstring>
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+
+//1
+void odliczanie(){
+	int i;
+	cin>>i;
+	
+	while(i>0){
+		cout<<i;
+		cout<<endl;
+		i--;
+	}
+	}
+	
+//2
+void stringi(){
+	string imie;
+	string nazwisko;
+	
+	
+		cin>>imie>>nazwisko;
+	
+	string full=imie+" "+nazwisko;
+	
+		cout<<full;
+		cout<<endl;
+		cout<<nazwisko<<" "<<imie;
+		cout<<endl;
+		cout<<imie[0]<<nazwisko[0];
+		cout<<endl; 
+	
+	int a;
+	a=imie.size();
+
+	while(a>=0){
+		cout<<imie[a];
+		a--;
+	}
+	
+		cout<<" ";
+	
+	int b;
+	b=nazwisko.size();
+	
+	while(b>=0){
+		cout<<nazwisko[b];
+		b--;
+	}
+	
+		cout<<endl;
+	
+	swap(imie[0], nazwisko[0]);
+	cout<<imie<<nazwisko;
+	
+}
+
+//3
+	void stringchar(){
+	char im[]="Arkadiusz";
+	string imie = im;
+	cout<<imie;
+		
+}
+	
+//4
+int policzlit(string sentence){
+	int dlugosc=sentence.size();
+	int ia=0;
+	for (int i=0; i < dlugosc; i++)
+		if (sentence[i] != ' ') ia++;
+	return ia;
+}
+
+
+//5
+	int literylicz(string sentencea, char l){
+	int dl=sentencea.length();
+	int ib=0;
+	for (int i=0; i < dl; i++)
+		if (sentencea[i] == l) ib++;
+	return ib;
+}
+
+		
+//6
+	void bezwzlicz(){
+	
+	double a,b,c;
+	cin>>a>>b>>c;
+	if(a<0){
+		a=-a;
+	}
+	if(b<0){
+		b=-b;
+	}
+	if(c<0){
+		c=-c;
+	}
+	double suma = a + b + c;
+	cout<<"Suma tych liczb jest rowna "<<suma;
+}
+
+//7
+	void najztrzech(){
+	
+	double a,b,c;
+	cin>>a>>b>>c;
+	
+	double naj = max(a,b);
+	double najnaj = max(naj,c);
+	cout<<"Najwieksza liczba to "<<najnaj;
+}
+
+//8
+	void booltroj(){
+	
+	double a,b,c;
+	cin>>a>>b>>c;
+	
+	bool trojkat;
+	bool positivum;
+	double naj = max(a,b);
+	double najnaj = max(naj,c);
+	
+	if(najnaj<a+b&&a>0&&b>0&&c>0||najnaj<a+c&&a>0&&b>0&&c>0||najnaj<b+c&&a>0&&b>0&&c>0){
+		trojkat = true;
+		
+	}
+		if(najnaj>a+b&&a>0&&b>0&&c>0||najnaj>a+c&&a>0&&b>0&&c>0||najnaj>b+c&&a>0&&b>0&&c>0){
+		trojkat=false;
+		cout<<"Podane liczby nie sa stronami trojkata ";
+		cout<<endl;
+		
+	}
+	if(a<=0||b<=0||c<=0){
+		positivum=false;
+	
+	}
+	else{
+		positivum=true;
+	}
+	if(trojkat==true){
+		cout<<"Podane liczby sa bokami trojkata ";
+		cout<<trojkat;
+		cout<<endl;
+	}
+	if(positivum==false){
+		
+		cout<<"Error: Numbers should be positive ";
+		cout<<positivum;	
+		
+	}
+	if(positivum==true){
+		cout<<" ";
+	}
+
+}
+
+int main(){
+	
+			cout<<"Wpisz 1 aby odliczyc od podanej liczby w dol ";
+			cout<<endl;
+			cout<<"Wpisz 2 aby odpalic nazwiska ";
+			cout<<endl;
+			cout<<"Wpisz 3 aby odpalic stringi char";
+			cout<<endl;
+			cout<<"Wpisz 4 aby policzyc litery ";
+			cout<<endl;
+			cout<<"Wpisz 5 aby policzyc ilosc litery w zdaniu ";
+			cout<<endl;
+			cout<<"Wpisz 6 aby dodac wartosci bezwzgledne 3 liczb ";
+			cout<<endl;
+			cout<<"Wpisz 7 aby wyswietlic najwieksza z podanych 3 liczb ";
+			cout<<endl;
+			cout<<"Wpisz 8 aby sprawdzic strony trojkata ";
+			cout<<endl;
+		
+	int wybor;
+		cin>>wybor;
+		
+		if(wybor==1){
+	
+		odliczanie();
+		return 0;
+	
+		}
+	
+		if(wybor==2){
+	
+		stringi();
+		return 0;
+	
+		}
+		
+		if(wybor==3){
+			
+		stringchar();
+		return 0;
+		
+		}
+		
+		if(wybor==4){
+			
+		string zdanie;
+		cout << "zdanie: ";
+		cin.ignore(1);
+		getline(cin,zdanie);
+		cout << policzlit(zdanie) << endl;
+		return 0;
+		
+		}
+		
+		if(wybor==5){
+		
+		string wyr;
+		char lit;
+		cout << "napis i litera: ";
+		cin >> wyr>>lit;
+		cout <<"ilosc "<<lit<<"="<< literylicz(wyr,lit) << endl;;
+		return 0;
+		
+		}
+		
+		if(wybor==6){
+		
+		cout<<"Wpisz liczby: ";
+		bezwzlicz();
+		return 0;
+		
+		}
+		if(wybor==7){
+		
+		cout<<"Wpisz liczby: ";
+		najztrzech();
+		return 0;
+		
+		}
+		
+		if(wybor==8){
+		
+		cout<<"wpisz boki trojkata: ";
+		booltroj();
+		return 0;
+		
+		}
+		
+		else{
+			cout<<"Error";
+		}
+		return 0;
+}
