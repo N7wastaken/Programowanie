@@ -81,14 +81,17 @@ int main(){
 	cin>>wybor;
 	
 	if(wybor==1){
+	cout<<"Wpisz liczby: ";
 	zadanie1();
 	return 0;
 	}
 	if(wybor==2){
+	cout<<"Wpisz liczby: ";
 	zadanie2();
 	return 0;
 	}
 	if(wybor==3){
+	cout<<"wpisz boki trojkata: ";
 	zadanie3();
 	return 0;
 	}	
