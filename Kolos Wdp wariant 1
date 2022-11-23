@@ -5,7 +5,7 @@ using namespace std;
 void zadanie1(){
 	
 	double a,b,c;
-	cin>>a,b,c;
+	cin>>a>>b>>c;
 	
 	double naj = max(a, b);
 	double najnaj = max(naj,c);
@@ -17,9 +17,8 @@ void zadanie1(){
 void zadanie2(){
 	
 	double a,b,c;
-	cin>>a;
-	cin>>b;
-	cin>>c;
+	cin>>a>>b>>c;
+	
 	if(a<0){
 		 a = -a;
 	}
