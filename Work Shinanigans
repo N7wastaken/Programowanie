@@ -79,7 +79,7 @@ int policzlit(string sentence){
 
 //5
 	int literylicz(string sentencea, char l){
-	int dl=sentencea.length();
+	int dl=sentencea.size();
 	int ib=0;
 	for (int i=0; i < dl; i++)
 		if (sentencea[i] == l) ib++;
