@@ -83,17 +83,16 @@ void stringi(){
 }
 }
 
-	void literylicz(){
-	
-	//cout<<"wpisz";
-	//cout<<endl;
-	//string costam;
-	//cin>>costam;
-	//int li;
-	//li=costam.find(a);
-	//cout<<li;
-		
+	int literylicz(string n, char l){
+	int d=n.length();
+	int ile=0;
+	for (int i=0; i < d; i++)
+		if (n[i] == l) ile++;
+	return ile;
 }
+
+		
+
 	void bezwzlicz(){
 	
 	double a,b,c;
@@ -202,7 +201,13 @@ int main(){
 		return 0;
 		}
 		if(wybor==5){
-		literylicz();
+		
+		string nap;
+		char znak;
+		cout << "napis i litera: ";
+		cin >> nap;
+		cin >> znak;
+		cout << literylicz(nap,znak) << endl;;
 		return 0;
 		}
 		if(wybor==6){
