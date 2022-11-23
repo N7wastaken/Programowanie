@@ -1,0 +1,230 @@
+#include<iostream>
+#include<string>
+#include<cstring>
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+
+void odliczanie(){
+	int i;
+	cin>>i;
+	
+	while(i>0){
+		cout<<i;
+		cout<<endl;
+		i--;
+	}
+	}
+	
+void stringi(){
+	string imie;
+	string nazwisko;
+	
+	
+		cin>>imie>>nazwisko;
+	
+	string full=imie+" "+nazwisko;
+	
+		cout<<full;
+		cout<<endl;
+		cout<<nazwisko<<" "<<imie;
+		cout<<endl;
+		cout<<imie[0]<<nazwisko[0];
+		cout<<endl; 
+	
+	int a;
+	a=imie.size();
+
+	while(a>=0){
+		cout<<imie[a];
+		a--;
+	}
+	
+		cout<<" ";
+	
+	int b;
+	b=nazwisko.size();
+	
+	while(b>=0){
+		cout<<nazwisko[b];
+		b--;
+	}
+	
+		cout<<endl;
+	
+	swap(imie[0], nazwisko[0]);
+	cout<<imie<<nazwisko;
+	
+}
+	void stringchar(){
+	char im[]="Arkadiusz";
+	string imie = im;
+	cout<<imie;
+		
+}
+	
+	void policzlit(){
+		
+		const int poj = 200;
+ 	
+	 cout << "Zliczacz" <<endl;
+    char wyraz[poj];
+    int ilosc_pow;
+    cin >> ilosc_pow;
+ 
+    if(ilosc_pow <= 150)
+    {    for(int i=0; i < ilosc_pow; i++) //dziala poprawnie.
+        {
+            cin.ignore(1);
+            cin.getline(wyraz, poj);
+            cout << strlen(wyraz)  << endl;//Tutaj daj strlen wtedy policzy aktualną długość wyraz
+        }
+		
+}
+}
+
+	void literylicz(){
+		
+	int ileliter(string n, char l){
+	int d=n.length();
+	int ile=0;
+	for (int i=0; i < d; i++)
+		if (n[i] == l) ile++;
+	return ile;
+}
+string nap;
+char znak;
+cout << "napis i litera: ";
+cin >> nap;
+cin >> znak;
+cout << ileliter(nap,znak) << endl;
+		
+}
+	void bezwzlicz(){
+	
+	double a,b,c;
+	cin>>a>>b>>c;
+	if(a<0){
+		a=-a;
+	}
+	if(b<0){
+		b=-b;
+	}
+	if(c<0){
+		c=-c;
+	}
+	double suma = a + b + c;
+	cout<<suma;
+}
+	void najztrzech(){
+	
+	double a,b,c;
+	cin>>a>>b>>c;
+	
+	double naj = max(a,b);
+	double najnaj = max(naj,c);
+	cout<<najnaj;
+}
+	void booltroj(){
+	
+	double a,b,c;
+	cin>>a>>b>>c;
+	
+	bool trojkat;
+	bool positivum;
+	double naj = max(a,b);
+	double najnaj = max(naj,c);
+	
+	if(najnaj<a+b&&a>0&&b>0&&c>0||najnaj<a+c&&a>0&&b>0&&c>0||najnaj<b+c&&a>0&&b>0&&c>0){
+		trojkat = true;
+		
+	}
+		if(najnaj>a+b&&a>0&&b>0&&c>0||najnaj>a+c&&a>0&&b>0&&c>0||najnaj>b+c&&a>0&&b>0&&c>0){
+		trojkat=false;
+		cout<<"Podane liczby nie sa stronami trojkata ";
+		cout<<endl;
+		
+	}
+	if(a<=0||b<=0||c<=0){
+		positivum=false;
+	
+	}
+	else{
+		positivum=true;
+	}
+	if(trojkat==true){
+		cout<<"Podane liczby sa bokami trojkata ";
+		cout<<trojkat;
+		cout<<endl;
+	}
+	if(positivum==false){
+		
+		cout<<"Error: Numbers should be positive ";
+		cout<<positivum;	
+		
+	}
+	if(positivum==true){
+		cout<<" ";
+	}
+
+}
+
+int main(){
+	
+			cout<<"Wpisz 1 aby odliczyc od podanej liczby w dol ";
+			cout<<endl;
+			cout<<"Wpisz 2 aby odpalic nazwiska ";
+			cout<<endl;
+			cout<<"Wpisz 3 aby odpalic stringi char";
+			cout<<endl;
+			cout<<"Wpisz 4 aby policzyc litery ";
+			cout<<endl;
+			cout<<"Wpisz 5 aby policzyc litery ";
+			cout<<endl;
+			cout<<"Wpisz 6 aby dodac wartosci bezwzgledne 3 liczb ";
+			cout<<endl;
+			cout<<"Wpisz 7 aby wyswietlic najwieksza z podanych 3 liczb ";
+			cout<<endl;
+			cout<<"Wpisz 8 aby sprawdzic strony trojkata ";
+			cout<<endl;
+		
+	int wybor;
+		cin>>wybor;
+		
+		if(wybor==1){
+		odliczanie();
+		return 0;
+		}
+		if(wybor==2){
+		stringi();
+		return 0;
+		}
+		if(wybor==3){
+		stringchar();
+		return 0;
+		}
+		if(wybor==4){
+		policzlit();
+		return 0;
+		}
+		if(wybor==5){
+		literylicz();
+		
+		}
+		if(wybor==6){
+		bezwzlicz();
+		return 0;
+		}
+		if(wybor==7){
+		najztrzech();
+		return 0;
+		}
+		if(wybor==8){
+		booltroj();
+		return 0;
+		}
+		else{
+			cout<<"Error";
+		}
+		return 0;
+}
