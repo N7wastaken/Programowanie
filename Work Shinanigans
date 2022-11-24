@@ -89,7 +89,7 @@ int policzlit(string sentence){
 
 		
 //6
-	void bezwzlicz(){
+void bezwzlicz(){
 	
 	double a,b,c;
 	cin>>a>>b>>c;
@@ -107,7 +107,7 @@ int policzlit(string sentence){
 }
 
 //7
-	void najztrzech(){
+void najztrzech(){
 	
 	double a,b,c;
 	cin>>a>>b>>c;
@@ -118,7 +118,7 @@ int policzlit(string sentence){
 }
 
 //8
-	void booltroj(){
+void booltroj(){
 	
 	double a,b,c;
 	cin>>a>>b>>c;
@@ -132,7 +132,7 @@ int policzlit(string sentence){
 		trojkat = true;
 		
 	}
-		if(najnaj>a+b&&a>0&&b>0&&c>0||najnaj>a+c&&a>0&&b>0&&c>0||najnaj>b+c&&a>0&&b>0&&c>0){
+	if(najnaj>a+b&&a>0&&b>0&&c>0||najnaj>a+c&&a>0&&b>0&&c>0||najnaj>b+c&&a>0&&b>0&&c>0){
 		trojkat=false;
 		cout<<"Podane liczby nie sa stronami trojkata ";
 		cout<<endl;
@@ -163,7 +163,7 @@ int policzlit(string sentence){
 }
 
 //9
-	void trojkapi() {
+void trojkapi() {
 	
 	int a, b, c;
 	int a1, b1, c1;
@@ -185,7 +185,9 @@ int policzlit(string sentence){
 	}
 }
 
+//10
 string szyfrowanie(string santance, int liczb){
+
 	int leng=santance.size();
 	for (int i=0; i < leng; i++){
 		santance[i] = char(int(santance[i]) + liczb);
@@ -193,7 +195,17 @@ string szyfrowanie(string santance, int liczb){
 	return santance;
 }
 
-
+//11
+string szyfrowanietegorsze(string sen){
+	int len=sen.size();
+	for (int i=0; i < len; i=i+2){
+		char uno=sen[i];
+		char dos=sen[i+1];
+		sen[i]=dos;
+		sen[i+1]=uno;
+	}
+	return sen;
+}
 
 int main(){
 	
@@ -216,6 +228,8 @@ int main(){
 			cout<<"Wpisz 9 aby sprawdzic czy 3 podane liczby to trojka pitagorejska ";
 			cout<<endl;
 			cout<<"Wpisz 10 aby zaszyfrowac podany text ";
+			cout<<endl;
+			cout<<"Wpisz 11 aby zaszyfrowac podany text [przestawianie] ";
 			cout<<endl;
 		
 	int wybor;
@@ -298,15 +312,26 @@ int main(){
 		
 		string kod;
 		int liczb;
-		cout << "zdanie: ";
+		cout << "Wpisz zdanie: ";
 		cin.ignore(1);
 		getline(cin,kod);
-		cout << "liczba do szyfrowania: ";
+		cout << "Wpisz liczbe do szyfrowania: ";
 		cin >> liczb;
 		kod=szyfrowanie(kod,liczb);
 		cout << kod << endl;
 
 		return 0;
+		
+		}
+		
+			if(wybor==11){
+		
+		string nap;
+		cout << "Wpisz zdanie: ";
+		cin.ignore(1);
+		getline(cin,nap);
+		nap=szyfrowanietegorsze(nap);
+		cout << nap << endl;
 		
 		}
 		
