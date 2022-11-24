@@ -161,6 +161,29 @@ int policzlit(string sentence){
 
 }
 
+//9
+	void trojkapi() {
+	
+	int a, b, c;
+	int a1, b1, c1;
+
+	cout << "Wpisz 3 liczby: ";
+	cout << endl;
+
+	cin >>a>>b>>c;
+
+	a1 = a * a;
+	b1 = b * b;
+	c1 = c * c;
+
+	if (a1 + b1 == c1 || b1 + c1 == a1 || a1 + c1 == b1) {
+		cout << "Podane liczby to trojka pitagorejska ";
+	}
+	else {
+		cout << "Podane liczby nie sa trojka pitagorejska";
+	}
+}
+
 int main(){
 	
 			cout<<"Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -178,6 +201,8 @@ int main(){
 			cout<<"Wpisz 7 aby wyswietlic najwieksza z podanych 3 liczb ";
 			cout<<endl;
 			cout<<"Wpisz 8 aby sprawdzic strony trojkata ";
+			cout<<endl;
+			cout<<"Wpisz 9 aby sprawdzic czy 3 podane liczby to trojka pitagorejska ";
 			cout<<endl;
 		
 	int wybor;
@@ -226,7 +251,7 @@ int main(){
 		
 		}
 		
-		if(wybor==6){
+		if(wybor==6){  
 		
 		cout<<"Wpisz liczby: ";
 		bezwzlicz();
@@ -245,6 +270,13 @@ int main(){
 		
 		cout<<"wpisz boki trojkata: ";
 		booltroj();
+		return 0;
+		
+		}
+		
+		if(wybor==9){
+		
+		trojkapi();
 		return 0;
 		
 		}
