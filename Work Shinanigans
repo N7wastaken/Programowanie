@@ -227,6 +227,15 @@ int liczspolgloski(string ses){
 	return iloscs;
 }
 
+//14
+int liczslowa(string zdanie){
+	int count=0;
+	int lo=zdanie.size();
+	for (int i=0; i < lo; i++)
+		if (zdanie[i] == ' ') count++;
+	
+	return count+1;
+}
 
 int main(){
 	
@@ -255,6 +264,8 @@ int main(){
 			cout<<"Wpisz 12 aby policzyc samogloski w podanym zdaniu ";
 			cout<<endl;
 			cout<<"Wpisz 13 aby policzyc spolgloski w podanym zdaniu ";
+			cout<<endl;
+			cout<<"Wpisz 14 aby zliczyc ilosc slow w podanym zdaniu";
 			cout<<endl;
 		
 	int wybor;
@@ -377,6 +388,16 @@ int main(){
 		cin.ignore(1);
 		getline(cin,wpiss);
 		cout << liczspolgloski(wpiss) << endl;
+	
+		}
+		
+			if(wybor==14){
+		
+		string slowo;
+		cout << "Wpisz zdanie: ";
+		cin.ignore(1);
+		getline(cin,slowo);
+		cout << liczslowa(slowo) << endl;
 	
 		}
 		
