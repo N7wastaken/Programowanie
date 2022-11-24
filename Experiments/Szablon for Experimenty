@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+
+
+
+
+int liczslowa(string zdanie){
+	int count=0;
+	int lo=zdanie.size();
+	for (int i=0; i < lo; i++)
+		if (zdanie[i] == ' ') count++;
+	
+	return count+1;
+}
+
+
+
+
+
+int main(){
+	
+			cout<<"Wpisz 1 aby wlaczyc program ";
+			cout<<endl;
+	
+		
+	int wybor;
+	
+		cin>>wybor;
+		
+		if(wybor==1){
+	
+string slowo;
+cout << "Wpisz zdanie: ";
+cin.ignore(1);
+getline(cin,slowo);
+cout << liczslowa(slowo) << endl;
+
+		}
+	
+
+		
+		else{
+			cout<<"Error";
+		}
+		return 0;
+}
