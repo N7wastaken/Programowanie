@@ -61,7 +61,8 @@ void stringi(){
 
 //3
 	void stringchar(){
-	char im[]="Arkadiusz";
+	char im[]="";
+	cin>>im;
 	string imie = im;
 	cout<<imie;
 		
@@ -184,25 +185,37 @@ int policzlit(string sentence){
 	}
 }
 
+string szyfrowanie(string santance, int liczb){
+	int leng=santance.size();
+	for (int i=0; i < leng; i++){
+		santance[i] = char(int(santance[i]) + liczb);
+	}
+	return santance;
+}
+
+
+
 int main(){
 	
 			cout<<"Wpisz 1 aby odliczyc od podanej liczby w dol ";
 			cout<<endl;
 			cout<<"Wpisz 2 aby odpalic nazwiska ";
 			cout<<endl;
-			cout<<"Wpisz 3 aby odpalic stringi char";
+			cout<<"Wpisz 3 aby zamienic char na string";
 			cout<<endl;
-			cout<<"Wpisz 4 aby policzyc litery ";
+			cout<<"Wpisz 4 aby policzyc litery w zdaniu ";
 			cout<<endl;
-			cout<<"Wpisz 5 aby policzyc ilosc litery w zdaniu ";
+			cout<<"Wpisz 5 aby policzyc ilosc wystepowania litery w zdaniu ";
 			cout<<endl;
 			cout<<"Wpisz 6 aby dodac wartosci bezwzgledne 3 liczb ";
 			cout<<endl;
 			cout<<"Wpisz 7 aby wyswietlic najwieksza z podanych 3 liczb ";
 			cout<<endl;
-			cout<<"Wpisz 8 aby sprawdzic strony trojkata ";
+			cout<<"Wpisz 8 aby sprawdzic czy 3 podane liczby to strony trojkata ";
 			cout<<endl;
 			cout<<"Wpisz 9 aby sprawdzic czy 3 podane liczby to trojka pitagorejska ";
+			cout<<endl;
+			cout<<"Wpisz 10 aby zaszyfrowac podany text ";
 			cout<<endl;
 		
 	int wybor;
@@ -277,6 +290,22 @@ int main(){
 		if(wybor==9){
 		
 		trojkapi();
+		return 0;
+		
+		}
+		
+		if(wybor==10){
+		
+		string kod;
+		int liczb;
+		cout << "zdanie: ";
+		cin.ignore(1);
+		getline(cin,kod);
+		cout << "liczba do szyfrowania: ";
+		cin >> liczb;
+		kod=szyfrowanie(kod,liczb);
+		cout << kod << endl;
+
 		return 0;
 		
 		}
