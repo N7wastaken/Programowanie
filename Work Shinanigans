@@ -207,6 +207,27 @@ string szyfrowanietegorsze(string sen){
 	return sen;
 }
 
+//12
+int liczsamogloski(string se){
+	string samog="aAeEiIoOuUyY";
+	int ilosc=0;
+	int lengt=se.size();
+	for (int i=0; i < lengt; i++)
+		if (samog.find(se[i]) < lengt) ilosc++;
+	return ilosc;
+}
+
+//13
+int liczspolgloski(string ses){
+	string samogs="bBcCdDzZfFgGhHjJkKlLmMnNpPrRsStTwW";
+	int iloscs=0;
+	int lengts=ses.size();
+	for (int i=0; i < lengts; i++)
+		if (samogs.find(ses[i]) < lengts) iloscs++;
+	return iloscs;
+}
+
+
 int main(){
 	
 			cout<<"Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -230,6 +251,10 @@ int main(){
 			cout<<"Wpisz 10 aby zaszyfrowac podany text ";
 			cout<<endl;
 			cout<<"Wpisz 11 aby zaszyfrowac podany text [przestawianie] ";
+			cout<<endl;
+			cout<<"Wpisz 12 aby policzyc samogloski w podanym zdaniu ";
+			cout<<endl;
+			cout<<"Wpisz 13 aby policzyc spolgloski w podanym zdaniu ";
 			cout<<endl;
 		
 	int wybor;
@@ -333,6 +358,26 @@ int main(){
 		nap=szyfrowanietegorsze(nap);
 		cout << nap << endl;
 		
+		}
+		
+		if(wybor==12){
+		
+		string wpis;
+		cout << "Wpisz zdanie: ";
+		cin.ignore(1);
+		getline(cin,wpis);
+		cout << liczsamogloski(wpis) << endl;
+	
+		}
+		
+			if(wybor==13){
+		
+		string wpiss;
+		cout << "Wpisz zdanie: ";
+		cin.ignore(1);
+		getline(cin,wpiss);
+		cout << liczspolgloski(wpiss) << endl;
+	
 		}
 		
 		else{
