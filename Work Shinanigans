@@ -361,6 +361,8 @@ int main(){
 			cout<<endl;
 			cout<<"Wpisz 17 aby policzyc najwiekszy wspolny dzielnik 2 podanych liczb ";
 			cout<<endl;
+			cout<<"Wpisz 18 aby policzyc silnie z podanej liczby ";
+			cout<<endl;
 		
 	int wybor;
 		cin>>wybor;
@@ -520,6 +522,14 @@ int main(){
 			if(wybor==17){
 		
 		najwd();
+		return 0;
+		
+		}
+		
+		
+				if(wybor==18){
+		
+		silnia();
 		return 0;
 		
 		}
