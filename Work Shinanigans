@@ -390,6 +390,44 @@ bool pal(string siantanc) {
 	
 }
 
+//23
+void abc() {
+
+	int steps = 0;
+	string kebab;
+	cout << "Podaj wyraz: ";
+	cin >> kebab;
+	int lh = kebab.size();
+
+	for (int i = 0; i < lh; i++) {
+		if (kebab[i] == 'a') {
+			kebab[i] = 'A';
+			steps++;
+		}
+		else if (kebab[i] == 'b') {
+			kebab[i] = 'B';
+			steps++;
+		}
+	}
+
+	if (lh % 2 != 0) {
+		char srd = kebab[(lh - 1) / 2];
+
+		if (srd != 'A' && srd != 'B') {
+			kebab[lh / 2] = toupper(kebab[lh / 2]);
+			steps++;
+		}
+	}
+
+	cout << "Zmieniony wyraz: " << kebab;
+	cout << endl;
+	cout << "Liczba zmian: " << steps;
+
+
+}
+
+	
+
 int main() {
 
 	cout << "Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -435,6 +473,8 @@ int main() {
 	cout << "Wpisz 21 aby policzyc zera podanej silni ";
 	cout << endl;
 	cout << "Wpisz 22 aby sprawdzic czy podany text jest palindromem ";
+	cout << endl;
+	cout << "Wpisz 23 aby wykonac zadanie zwiekszania liter ";
 	cout << endl;
 
 	int wybor;
@@ -653,6 +693,12 @@ int main() {
 		cin >> pali;
 		cout<<"Jest = 1 / Nie jest = 0 ======> "<<pal(pali);
 
+	}
+
+	if (wybor == 23) {
+
+		abc();
+		return 0;
 	}
 
 	else {
