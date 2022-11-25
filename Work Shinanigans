@@ -178,7 +178,7 @@ void trojkapi() {
 	c1 = c * c;
 
 	if (a1 + b1 == c1 || b1 + c1 == a1 || a1 + c1 == b1) {
-		cout << "Podane liczby to trojka pitagorejska ";
+		cout << "Podane liczby stanowia trojke pitagorejska ";
 	}
 	else {
 		cout << "Podane liczby nie sa trojka pitagorejska";
@@ -186,6 +186,21 @@ void trojkapi() {
 }
 
 //10
+void tablicasc(){
+
+
+for (int i=33; i<256; i++){
+  cout.width(4);
+  cout  << (char) (i);
+  cout.width(4);
+  cout << i;
+  if (i % 8 == 0) cout << endl;
+  
+}
+
+}
+
+//11
 string szyfrowanie(string santance, int liczb){
 
 	int leng=santance.size();
@@ -195,7 +210,7 @@ string szyfrowanie(string santance, int liczb){
 	return santance;
 }
 
-//11
+//12
 string szyfrowanietegorsze(string sen){
 	int len=sen.size();
 	for (int i=0; i < len; i=i+2){
@@ -207,7 +222,7 @@ string szyfrowanietegorsze(string sen){
 	return sen;
 }
 
-//12
+//13
 int liczsamogloski(string se){
 	string samog="aAeEiIoOuUyY";
 	int ilosc=0;
@@ -217,7 +232,7 @@ int liczsamogloski(string se){
 	return ilosc;
 }
 
-//13
+//14
 int liczspolgloski(string ses){
 	string samogs="bBcCdDzZfFgGhHjJkKlLmMnNpPrRsStTwW";
 	int iloscs=0;
@@ -227,7 +242,7 @@ int liczspolgloski(string ses){
 	return iloscs;
 }
 
-//14
+//15
 int liczslowa(string zdanie){
 	int count=0;
 	int lo=zdanie.size();
@@ -235,6 +250,53 @@ int liczslowa(string zdanie){
 		if (zdanie[i] == ' ') count++;
 	
 	return count+1;
+}
+
+//16
+void poradnia(int a){
+
+
+if(a<=11&&a>=5){
+
+	cout<<"Morning ";
+
+	}
+
+if(a==12){
+
+	cout<<"Noon ";
+
+	}
+
+if(a<=17&&a>=13){
+
+	cout<<"Afternoon ";
+
+	}
+
+if(a<=20&&a>=18){
+
+	cout<<"Evening ";
+
+	}
+
+if(a<=23&&a>=21||a>=1&&a<=4){
+
+	cout<<"Night ";
+
+	}
+
+if(a==24){
+	
+	cout<<"Mindnight";
+	
+	}
+
+if(a<0){
+	
+	cout<<"Error";
+	
+	}
 }
 
 int main(){
@@ -257,15 +319,19 @@ int main(){
 			cout<<endl;
 			cout<<"Wpisz 9 aby sprawdzic czy 3 podane liczby to trojka pitagorejska ";
 			cout<<endl;
-			cout<<"Wpisz 10 aby zaszyfrowac podany text ";
+			cout<<"Wpisz 10 aby wyswietlic tablice kodow ASCII ";
 			cout<<endl;
-			cout<<"Wpisz 11 aby zaszyfrowac podany text [przestawianie] ";
+			cout<<"Wpisz 11 aby zaszyfrowac podany text ";
 			cout<<endl;
-			cout<<"Wpisz 12 aby policzyc samogloski w podanym zdaniu ";
+			cout<<"Wpisz 12 aby zaszyfrowac podany text [przestawianie] ";
 			cout<<endl;
-			cout<<"Wpisz 13 aby policzyc spolgloski w podanym zdaniu ";
+			cout<<"Wpisz 13 aby policzyc samogloski w podanym zdaniu ";
 			cout<<endl;
-			cout<<"Wpisz 14 aby zliczyc ilosc slow w podanym zdaniu";
+			cout<<"Wpisz 14 aby policzyc spolgloski w podanym zdaniu ";
+			cout<<endl;
+			cout<<"Wpisz 15 aby zliczyc ilosc slow w podanym zdaniu ";
+			cout<<endl;
+			cout<<"Wpisz 16 aby sprawdzic pore dnia ";
 			cout<<endl;
 		
 	int wybor;
@@ -346,6 +412,13 @@ int main(){
 		
 		if(wybor==10){
 		
+		tablicasc();
+		return 0;
+		
+		}
+		
+		if(wybor==11){
+		
 		string kod;
 		int liczb;
 		cout << "Wpisz zdanie: ";
@@ -360,7 +433,7 @@ int main(){
 		
 		}
 		
-			if(wybor==11){
+			if(wybor==12){
 		
 		string nap;
 		cout << "Wpisz zdanie: ";
@@ -371,7 +444,7 @@ int main(){
 		
 		}
 		
-		if(wybor==12){
+		if(wybor==13){
 		
 		string wpis;
 		cout << "Wpisz zdanie: ";
@@ -381,7 +454,7 @@ int main(){
 	
 		}
 		
-			if(wybor==13){
+			if(wybor==14){
 		
 		string wpiss;
 		cout << "Wpisz zdanie: ";
@@ -391,13 +464,23 @@ int main(){
 	
 		}
 		
-			if(wybor==14){
+			if(wybor==15){
 		
 		string slowo;
 		cout << "Wpisz zdanie: ";
 		cin.ignore(1);
 		getline(cin,slowo);
 		cout << liczslowa(slowo) << endl;
+	
+		}
+		
+			if(wybor==16){
+		
+		int por;
+		cout<<"Wpisz godzine: ";
+		cin>>por;	
+		cout<<"Pora dnia: ";
+		poradnia(por);
 	
 		}
 		
