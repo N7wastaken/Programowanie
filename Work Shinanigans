@@ -349,6 +349,20 @@ float ciongi(float n) {
 
 	return 2 * (ciongi(n - 1)) + ciongi(n - 2);
 }
+
+//20
+void konwerter(char a, double b) {
+	double wynik;
+	if (a == 'C'||a=='c') {
+		wynik = ((b * 9) / 5) + 32;
+		cout << b << " Stopni Celsjusza -> " << wynik << " Stopni Fahrenheita";
+	}
+
+	if (a == 'F'||a=='f') {
+		wynik = ((b - 32) * 5) / 9;
+		cout << b << " Stopni Fahrenheita -> " << wynik << " Stopni Celsjusza";
+	};
+}
 int main() {
 
 	cout << "Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -388,6 +402,8 @@ int main() {
 	cout << "Wpisz 18 aby policzyc silnie z podanej liczby ";
 	cout << endl;
 	cout << "Wpisz 19 aby policzyc n=ty wyraz ciagu ";
+	cout << endl;
+	cout << "Wpisz 20 aby wlaczyc konwerter temperatur ";
 	cout << endl;
 
 	int wybor;
@@ -571,6 +587,26 @@ int main() {
 		return 0;
 
 	}
+
+	if (wybor == 20) {
+
+		char a = NULL;
+		double b = 0;
+		while (a != 'F' && a != 'f' && a != 'C' && a != 'c')
+		{
+			cout << "Podaj jaka masz temperature: ";
+			
+			cin >> b;
+
+			cout << "Wybierz rodzaj temperatury 'F' or 'C': ";
+			cin >> a;
+		}
+		konwerter(a, b);
+
+		cout << endl;
+		
+	}
+
 	else {
 		cout << "Error";
 	}
