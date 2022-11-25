@@ -7,6 +7,7 @@ using namespace std;
 
 //1
 void odliczanie(){
+
 	int i;
 	cin>>i;
 	
@@ -19,6 +20,7 @@ void odliczanie(){
 	
 //2
 void stringi(){
+
 	string imie;
 	string nazwisko;
 	
@@ -60,7 +62,8 @@ void stringi(){
 }
 
 //3
-	void stringchar(){
+void stringchar(){
+
 	char im[]="";
 	cin>>im;
 	string imie = im;
@@ -70,6 +73,7 @@ void stringi(){
 	
 //4
 int policzlit(string sentence){
+
 	int dlugosc=sentence.size();
 	int ia=0;
 	for (int i=0; i < dlugosc; i++)
@@ -79,7 +83,8 @@ int policzlit(string sentence){
 
 
 //5
-	int literylicz(string sentencea, char l){
+int literylicz(string sentencea, char l){
+
 	int dl=sentencea.size();
 	int ib=0;
 	for (int i=0; i < dl; i++)
@@ -188,7 +193,6 @@ void trojkapi() {
 //10
 void tablicasc(){
 
-
 for (int i=33; i<256; i++){
   cout.width(4);
   cout  << (char) (i);
@@ -224,26 +228,31 @@ string szyfrowanietegorsze(string sen){
 
 //13
 int liczsamogloski(string se){
+
 	string samog="aAeEiIoOuUyY";
 	int ilosc=0;
 	int lengt=se.size();
 	for (int i=0; i < lengt; i++)
 		if (samog.find(se[i]) < lengt) ilosc++;
+
 	return ilosc;
 }
 
 //14
 int liczspolgloski(string ses){
+
 	string samogs="bBcCdDzZfFgGhHjJkKlLmMnNpPrRsStTwW";
 	int iloscs=0;
 	int lengts=ses.size();
 	for (int i=0; i < lengts; i++)
 		if (samogs.find(ses[i]) < lengts) iloscs++;
+
 	return iloscs;
 }
 
 //15
 int liczslowa(string zdanie){
+
 	int count=0;
 	int lo=zdanie.size();
 	for (int i=0; i < lo; i++)
@@ -256,49 +265,66 @@ int liczslowa(string zdanie){
 void poradnia(int a){
 
 
-if(a<=11&&a>=5){
+	if(a<=11&&a>=5){
 
-	cout<<"Morning ";
+		cout<<"Morning ";
 
-	}
+		}	
 
-if(a==12){
+	if(a==12){
 
-	cout<<"Noon ";
+		cout<<"Noon ";
 
-	}
+		}
 
-if(a<=17&&a>=13){
+	if(a<=17&&a>=13){
 
-	cout<<"Afternoon ";
+		cout<<"Afternoon ";
 
-	}
+		}
 
-if(a<=20&&a>=18){
+	if(a<=20&&a>=18){
 
-	cout<<"Evening ";
+		cout<<"Evening ";
 
-	}
+		}
 
-if(a<=23&&a>=21||a>=1&&a<=4){
+	if(a<=23&&a>=21||a>=1&&a<=4){
 
-	cout<<"Night ";
+		cout<<"Night ";
 
-	}
+		}
 
-if(a==24){
+	if(a==24){
 	
-	cout<<"Mindnight";
+		cout<<"Mindnight";
 	
-	}
+		}
 
-if(a<0){
+	if(a<0){
 	
-	cout<<"Error";
+		cout<<"Error";
 	
-	}
+		}
 }
 
+//17
+void najwd(){
+	
+	int a,b;
+	cout << "Podaj 2 liczby: ";
+	cin >>a>>b;
+	cout << "Najwiekszy wspolny dzielnik (" << a << "," << b << ") = ";
+	while (a != b)
+	{
+	if (a < b)
+	b = b-a;
+	else
+	a = a-b;
+	}
+	cout << a << endl;
+	}
+	
 int main(){
 	
 			cout<<"Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -332,6 +358,8 @@ int main(){
 			cout<<"Wpisz 15 aby zliczyc ilosc slow w podanym zdaniu ";
 			cout<<endl;
 			cout<<"Wpisz 16 aby sprawdzic pore dnia ";
+			cout<<endl;
+			cout<<"Wpisz 17 aby policzyc najwiekszy wspolny dzielnik 2 podanych liczb ";
 			cout<<endl;
 		
 	int wybor;
@@ -442,6 +470,7 @@ int main(){
 		nap=szyfrowanietegorsze(nap);
 		cout << nap << endl;
 		
+		return 0;
 		}
 		
 		if(wybor==13){
@@ -452,6 +481,7 @@ int main(){
 		getline(cin,wpis);
 		cout << liczsamogloski(wpis) << endl;
 	
+		return 0;
 		}
 		
 			if(wybor==14){
@@ -461,7 +491,8 @@ int main(){
 		cin.ignore(1);
 		getline(cin,wpiss);
 		cout << liczspolgloski(wpiss) << endl;
-	
+		
+		return 0;
 		}
 		
 			if(wybor==15){
@@ -471,7 +502,8 @@ int main(){
 		cin.ignore(1);
 		getline(cin,slowo);
 		cout << liczslowa(slowo) << endl;
-	
+		
+		return 0;
 		}
 		
 			if(wybor==16){
@@ -482,6 +514,14 @@ int main(){
 		cout<<"Pora dnia: ";
 		poradnia(por);
 	
+		return 0;
+		}
+		
+			if(wybor==17){
+		
+		najwd();
+		return 0;
+		
 		}
 		
 		else{
