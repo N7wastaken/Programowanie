@@ -324,6 +324,22 @@ void najwd(){
 	}
 	cout << a << endl;
 	}
+
+//18
+void silnia(){
+	
+	long double a;
+	long double sil;
+	cin>>a;
+	sil=1;
+	while(a>0){
+	
+	sil=sil*a;
+	a--;
+	
+	}
+		cout<<sil;
+	}
 	
 int main(){
 	
@@ -527,7 +543,7 @@ int main(){
 		}
 		
 		
-				if(wybor==18){
+			if(wybor==18){
 		
 		silnia();
 		return 0;
