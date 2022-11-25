@@ -361,8 +361,35 @@ void konwerter(char a, double b) {
 	if (a == 'F'||a=='f') {
 		wynik = ((b - 32) * 5) / 9;
 		cout << b << " Stopni Fahrenheita -> " << wynik << " Stopni Celsjusza";
-	};
+	}
 }
+
+//21
+void silniazer() {
+	int liczsil;
+	cin >> liczsil;
+	double zer;
+	double zera;
+	double wynik;
+	zer = liczsil / 5;
+	zera = liczsil / 25;
+	wynik = zer + zera;
+
+	cout << "Liczba zer silni wynosi: " << wynik;
+}
+
+//22
+bool pal(string siantanc) {
+	int dlu = siantanc.size();
+	for (int i = 0; i <= dlu / 2; i++) {
+		char eins = siantanc[i];
+		char zwei = siantanc[dlu - i - 1];
+		if (eins != zwei) return false;
+	}
+	return true;
+	
+}
+
 int main() {
 
 	cout << "Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -404,6 +431,10 @@ int main() {
 	cout << "Wpisz 19 aby policzyc n=ty wyraz ciagu ";
 	cout << endl;
 	cout << "Wpisz 20 aby wlaczyc konwerter temperatur ";
+	cout << endl;
+	cout << "Wpisz 21 aby policzyc zera podanej silni ";
+	cout << endl;
+	cout << "Wpisz 22 aby sprawdzic czy podany text jest palindromem ";
 	cout << endl;
 
 	int wybor;
@@ -607,8 +638,29 @@ int main() {
 		
 	}
 
+	if (wybor == 21) {
+
+		cout << "Wpisz liczbe z ktorej chcesz otrzymac liczbe zer po silni: ";
+		silniazer();
+		return 0;
+
+	}
+
+	if (wybor == 22) {
+
+		string pali;
+		cout << "Wpisz text: ";
+		cin >> pali;
+		cout<<"Jest = 1 / Nie jest = 0 ======> "<<pal(pali);
+
+	}
+
 	else {
 		cout << "Error";
 	}
 	return 0;
 }
+
+
+
+
