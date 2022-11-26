@@ -1,0 +1,157 @@
+//Mulkityn Arkadiusz 173407
+#include<iostream>
+#include<string>
+using namespace std;
+
+//1
+void Zadanie_1_1() {
+
+	double a, b, c;
+	cin >> a >> b >> c;
+
+	double naj = min(a, b);
+	double najnaj = min(naj, c);
+	cout << "Najmniejsza liczba to " << najnaj;
+}
+
+//2
+void Zadanie_1_2() {
+
+	double a, b, c;
+	cin >> a >> b >> c;
+	
+	if(b<0){
+		b=-b;
+	}
+	double wynik=(a*a)-b;
+
+	cout << "Wynik a^2-|b| wynosi " << wynik;
+}
+
+//3
+double kol(double r) {
+	
+	
+	double pi = 3.1415926;
+	double kolo = pi * (r * r);
+
+	return kolo;
+
+}
+
+//4
+string Zadanie_3(string sen) {
+	int len = sen.size();
+	for (int i = 0; i < len; i = i + 2) {
+		char uno = sen[i];
+		char dos = sen[i + 1];
+		sen[i] = dos;
+		sen[i + 1] = uno;
+	}
+	return sen;
+}
+
+//5
+long long Zadanie_4(long long n) {
+	if (n == 1) {
+		return 1;
+	}
+	if (n == 0) {
+		return 1;
+	}
+
+	return (3*(Zadanie_4(n - 1))) + (2*(Zadanie_4(n - 2)));
+}
+
+int main(){
+	
+		cout << "Wpisz 1 aby odpalic Zadanie 14.1a";
+		cout << endl;
+		cout << "Wpisz 2 aby odpalic Zadanie 14.1b";
+		cout << endl;
+		cout << "Wpisz 3 aby odpalic Zadanie 14.2";
+		cout << endl;
+		cout << "Wpisz 4 aby odpalic Zadanie 14.3";
+		cout << endl;
+		cout << "Wpisz 5 aby odpalic Zadanie 14.4";
+		cout << endl;
+	
+	
+	int wybor;
+	cin>>wybor;
+	
+	if(wybor==1){
+	cout<<"Wpisz 3 liczby: ";
+	Zadanie_1_1(); 
+
+	return 0;
+	}
+	
+	if(wybor==2){
+	
+	cout<<"Wpisz 3 liczby: ";
+	Zadanie_1_2();
+	
+	return 0;
+	}
+	
+	if(wybor==3){
+
+		cout << "Wpisz dlugosc promienia: ";
+	
+		double pro;
+		cin >> pro;
+		
+			bool positivum;
+	if (pro<0) {
+		positivum = false;
+
+	}
+	else {
+		positivum = true;
+	}
+	
+	if (positivum == false) {
+
+		cout << "Error: Numbers should be positive ";
+		cout << positivum;
+		return 0;
+	}
+	if (positivum == true) {
+
+		
+		cout <<"Pole kola wynosi: "<< kol(pro);
+		
+		return 0;
+	}
+}
+
+	if(wybor==4){
+
+		string nap;
+		cout << "Wpisz zdanie: ";
+		cin.ignore(1);
+		getline(cin, nap);
+		nap = Zadanie_3(nap);
+		cout << nap << endl;
+
+		return 0;
+
+	return 0;
+	}	
+	
+	if(wybor==5){
+
+	cout << "Wpisz ktory wyraz ciagu chcesz obliczyc: ";
+		long long ciong;
+		cin >> ciong;
+		cout<<Zadanie_4(ciong);
+
+	return 0;
+	}	
+	
+	else{
+	cout<<"Error";
+	}
+
+}
