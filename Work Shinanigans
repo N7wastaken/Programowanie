@@ -426,6 +426,18 @@ void abc() {
 
 }
 
+//24
+string los(string sant) {
+	string kanapka = "";
+	int dc = sant.size();
+	for (int i = dc; i > 0; i--) {
+		int br = rand() % i;
+		string ch = sant.substr(br, 1);
+		sant = sant.erase(br, 1);
+		kanapka = kanapka + ch;
+	}
+	return kanapka;
+}
 	
 
 int main() {
@@ -475,6 +487,8 @@ int main() {
 	cout << "Wpisz 22 aby sprawdzic czy podany text jest palindromem ";
 	cout << endl;
 	cout << "Wpisz 23 aby wykonac zadanie zwiekszania liter ";
+	cout << endl;
+	cout << "Wpisz 24 aby zrandomizowac podane zdanie ";
 	cout << endl;
 
 	int wybor;
@@ -698,6 +712,17 @@ int main() {
 	if (wybor == 23) {
 
 		abc();
+		return 0;
+	}
+
+	if (wybor == 24) {
+
+		string txt;
+		cout << "Wpisz zdanie: ";
+		cin.ignore(1);
+		getline(cin, txt);
+		cout << los(txt);
+	
 		return 0;
 	}
 
