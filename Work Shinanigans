@@ -444,7 +444,23 @@ string los(string sant) {
 	return kanapka;
 }
 	
+//25
+double kol(double r) {
+	float pi = 3.141592;
+	double kolo = pi * (r * r);
 
+	return kolo;
+
+}
+
+//26
+double kolobw(double pr) {
+	float pi = 3.141592;
+	double koloob = (2*pi)*pr;
+
+	return koloob;
+
+}
 int main() {
 
 	cout << "Wpisz 1 aby odliczyc od podanej liczby w dol ";
@@ -495,6 +511,11 @@ int main() {
 	cout << endl;
 	cout << "Wpisz 24 aby zrandomizowac podane zdanie ";
 	cout << endl;
+	cout << "Wpisz 25 aby obliczyc pole kola ";
+	cout << endl;
+	cout << "Wpisz 26 aby obliczyc obwod kola ";
+	cout << endl;
+
 
 	int wybor;
 	cin >> wybor;
@@ -728,6 +749,24 @@ int main() {
 		getline(cin, txt);
 		cout << los(txt);
 	
+		return 0;
+	}
+
+	if (wybor == 25) {
+		cout << "Wpisz dlugosc promienia: ";
+		double pro;
+		cin >> pro;
+		cout <<"Pole kola wynosi: "<< kol(pro);
+		
+		return 0;
+	}
+
+	if (wybor == 26) {
+		cout << "Wpisz dlugosc promienia: ";
+		double prom;
+		cin >> prom;
+		cout << "Obwod kola wynosi: " << kolobw(prom);
+
 		return 0;
 	}
 
