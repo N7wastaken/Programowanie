@@ -54,7 +54,7 @@ void stringi() {
 	cout << endl;
 
 	swap(imie[0], nazwisko[0]);
-	cout << imie << nazwisko;
+	cout << imie << " " << nazwisko;
 
 }
 
