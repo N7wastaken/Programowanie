@@ -1,0 +1,12 @@
+// do przerobienia w robocie 
+//    |
+//    V
+console.log("auto bonus script started ;)");
+function autoNext() {
+  let bonusBtn = document.querySelector('button[aria-label="Claim Bonus"]');
+  if (bonusBtn !== null) {
+    console.log("getting bonus ;)");
+    bonusBtn.click();
+  }
+}
+setInterval(autoNext, 1000);
