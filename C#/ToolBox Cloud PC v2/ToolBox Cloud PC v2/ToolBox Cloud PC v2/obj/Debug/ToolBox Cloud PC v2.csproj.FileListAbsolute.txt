@@ -1,0 +1,11 @@
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\bin\Debug\ToolBox Cloud PC v2.exe.config
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\bin\Debug\ToolBox Cloud PC v2.exe
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\bin\Debug\ToolBox Cloud PC v2.pdb
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox Cloud PC v2.csproj.AssemblyReference.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox Cloud PC v2.csproj.SuggestedBindingRedirects.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox_Cloud_PC_v2.Properties.Resources.resources
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox Cloud PC v2.csproj.GenerateResource.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox Cloud PC v2.csproj.CoreCompileInputs.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox Cloud PC v2.exe
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox Cloud PC v2.pdb
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox Cloud PC v2\ToolBox Cloud PC v2\ToolBox Cloud PC v2\obj\Debug\ToolBox_Cloud_PC_v2.CloudPCToolBox.resources
