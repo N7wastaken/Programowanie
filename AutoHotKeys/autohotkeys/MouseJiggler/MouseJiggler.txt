@@ -1,0 +1,9 @@
+
+
+Jiggler()
+{
+MouseMove 25, 25, 50, "R"
+MouseMove -25, -25, 50, "R"
+}
+
+SetTimer Jiggler, 25

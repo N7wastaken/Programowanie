@@ -1,0 +1,13 @@
+SetTimer Kamera, 250
+#HotIf WinActive("ahk_id 919292")
+
+Kamera()
+{
+if PixelSearch(&Px, &Py, -1093, 771, -810, 330, 0xB89190 , 7)
+
+	MsgBox "Hello"
+
+
+}
+
+ 

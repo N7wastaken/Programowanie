@@ -1,0 +1,10 @@
+#HotIf MouseIsOver("ahk_class Shell_TrayWnd")
+
+WheelUp:: Send "^#{Right}"
+WheelDown:: Send "^#{Left}"
+
+
+MouseIsOver(WinTitle) {
+    MouseGetPos ,, &Win
+    return WinExist(WinTitle " ahk_id " Win)
+}
