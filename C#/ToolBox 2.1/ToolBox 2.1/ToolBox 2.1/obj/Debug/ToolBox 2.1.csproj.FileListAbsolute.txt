@@ -1,0 +1,11 @@
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\bin\Debug\ToolBox 2.1.exe.config
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\bin\Debug\ToolBox 2.1.exe
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\bin\Debug\ToolBox 2.1.pdb
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox 2.1.csproj.AssemblyReference.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox 2.1.csproj.SuggestedBindingRedirects.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox_2._1.Form1.resources
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox_2._1.Properties.Resources.resources
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox 2.1.csproj.GenerateResource.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox 2.1.csproj.CoreCompileInputs.cache
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox 2.1.exe
+C:\Users\arkadiusz.mulkityn\Desktop\ToolBox 2.1\ToolBox 2.1\ToolBox 2.1\obj\Debug\ToolBox 2.1.pdb
