@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdbool.h> // for boolean (true/false operator)
+
+// C is capital sensitive kurwa like Java
+
+int main(){
+    int a = 1;                // for printing use %d
+    double b = 100;           // for printing use %lf
+    float c = 100;            // for printing use %f
+    char d = 'c' ;            // for printing use %c
+    char tablica[] = "slowo"; // for printing string %s
+    printf("inty tak = %d \n, double tak = %lf \n, floaty tak = %f \n, chary tak = %c \n",a,b,c,d); //variables are swapped from left to right as shown
+
+    printf("Size of a = %zu \n", sizeof(a)); // "size of" shows the size of data type used for variable or some shit like that
+
+    int liczba;                                         //declaration of variable for input
+    scanf("%d", &liczba);                        //scan for the variable and assignment with &
+    printf("Tu masz co wpisales %d \n",liczba);  // Print
+
+    /*  int costam;
+      float costam; marking segment + ctrl + shift + / = entire thing commented like that
+      double costam;*/
+    //this one is better ^
+    //                   |
+//    int costam;
+//    float costam; marking segment + ctrl + / = entire thing commented like that
+//    double costam;
+
+// if's & loops are going to be skipped cause it's kurwa basic programowanie for babies
+
+// Ternary Operators
+    int hajs = 15;
+
+    (hajs>=30) ? printf("Mozesz se kupic jednorazowke") : printf(" Nie stac cie "); // if condition is met executes first one, otherwise executes second one like if's chyba
+
+    //switches skipped to cause why not
+
+    int liczba = 10; // zmienna
+    int *wskaznik;  // wskaźnik do zmiennej typu int
+
+    wskaznik = &liczba;  // przypisanie adresu zmiennej liczba do wskaźnika
+
+    printf("Wartość zmiennej liczba: %d\n", *wskaznik); // dostęp do wartości zmiennej przez wskaźnik
+
+
+// CDN...
+}
