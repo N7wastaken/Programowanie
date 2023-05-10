@@ -4,11 +4,12 @@
 // C is capital sensitive kurwa like Java
 
 int main(){
-    int a = 1;                // for printing use %d
-    double b = 100;           // for printing use %lf
-    float c = 100;            // for printing use %f
-    char d = 'c' ;            // for printing use %c
+    int a = 1;                // for printing int use %d
+    double b = 100;           // for printing double use %lf
+    float c = 100;            // for printing float use %f
+    char d = 'c' ;            // for printing char use %c
     char tablica[] = "slowo"; // for printing string %s
+
     printf("inty tak = %d \n, double tak = %lf \n, floaty tak = %f \n, chary tak = %c \n",a,b,c,d); //variables are swapped from left to right as shown
 
     printf("Size of a = %zu \n", sizeof(a)); // "size of" shows the size of data type used for variable or some shit like that
@@ -31,16 +32,46 @@ int main(){
 // Ternary Operators
     int hajs = 15;
 
-    (hajs>=30) ? printf("Mozesz se kupic jednorazowke") : printf(" Nie stac cie "); // if condition is met executes first one, otherwise executes second one like if's chyba
+    (hajs>=30) ? printf("Mozesz se kupic jednorazowke ") : printf(" Nie stac cie \n "); // if condition is met executes first one, otherwise executes second one like if's chyba
 
-    //switches skipped to cause why not
+    //switches skipped too, cause why not
 
-    int liczba = 10; // zmienna
-    int *wskaznik;  // wskaźnik do zmiennej typu int
+    int liczbas = 10;
+    int *wskaznik;  // pointer for int variable
 
-    wskaznik = &liczba;  // przypisanie adresu zmiennej liczba do wskaźnika
+    wskaznik = &liczbas;  // liczba adress assigned to pointer
 
-    printf("Wartość zmiennej liczba: %d\n", *wskaznik); // dostęp do wartości zmiennej przez wskaźnik
+    printf("Wartosc zmiennej liczbas: %d \n", *wskaznik); // access of variable by pointer
+
+
+    int dodaj(int a, int b) {
+        return a + b;
+    }
+
+    int (*wskaznik2)(int, int); // A pointer to a function with two arguments of type int and returning int
+
+    wskaznik2 = dodaj; // assigning fucntion adress to pointer
+
+    int wynik = wskaznik2(4, 5); // calling function by pointer
+
+    printf("Wynik dodawania: %d\n", wynik);
+
+    struct Osoba {
+        char imie[20];
+        int wiek;
+    };
+
+    struct Osoba osoba1;
+    struct Osoba *wskaznik3;
+
+    wskaznik3 = &osoba1;
+
+    strcpy(wskaznik3->imie, "chuj"); // assigning value to imie by pointer
+    wskaznik3->wiek = 21; // assigning value to wiek by pointer
+
+    printf("Imie: %s, Wiek: %d\n", wskaznik3->imie, wskaznik3->wiek); // calling imie & wiek by using pointers
+
+
 
 
 // CDN...
