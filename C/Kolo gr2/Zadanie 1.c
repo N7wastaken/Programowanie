@@ -10,7 +10,7 @@ double sredniageo(double w, double x, double y, double z, int pier){
         printf("Nieprawidlowe dane, pod pierwiastkiem o stopniu parzystym nie moze znalezc sie liczba ujemna!\n");
         exit(1);
     } else {
-        srednia = pow(fabs(liczba), 1.0 / stopienpierwiastka);
+        srednia = pow(liczba, 1.0 / stopienpierwiastka);
     }
 
     return srednia;
