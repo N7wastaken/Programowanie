@@ -14,7 +14,6 @@ double sredniageo(double w, double x, double y, double z, int pier){
     }
 
     return srednia;
-    return srednia;
 }
 
 int main(){
