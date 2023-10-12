@@ -11,8 +11,7 @@ class Temperatury
     {
         int wybor;
         double C, F;
-        Console.WriteLine("Przelicznie temperatury z C na F");
-        Console.WriteLine("Wybierz\n 1. Celsius na Farenchuj\n 2. Farenchuj na Celsius");
+        Console.WriteLine("Przelicznie temperatury z C na F\n Wybierz\n 1. Celsius na Farenchuj\n 2. Farenchuj na Celsius");
         wybor = int.Parse(Console.ReadLine());
 
         switch (wybor)
