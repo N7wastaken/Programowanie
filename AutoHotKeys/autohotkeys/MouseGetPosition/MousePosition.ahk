@@ -3,9 +3,10 @@
 CoordMode, Mouse, Screen
 OutputFile := "Clicks.txt" ; Nazwa pliku
 
-^1::
+^1:: ; Kombinacja klawiszy Ctrl+1 do klikania i zapisywania koordynatów
     MouseGetPos, MouseX, MouseY
-    FileAppend, % MouseX "x" MouseY "`n", %OutputFile%
+    komenda := "MouseClick, Left, " . MouseX . ", " . MouseY
+    Run, cmd.exe /c echo %komenda% >> %OutputFile%
     if !FileExist(OutputFile)
     {
         Run, notepad.exe %OutputFile%
