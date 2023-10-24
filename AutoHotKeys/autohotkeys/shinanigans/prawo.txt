@@ -1,0 +1,22 @@
+#NoEnv
+SendMode Input
+
+#Persistent ; Utrzymaj skrypt aktywnym
+
+Toggle := 0
+
+Home:: ; Przypisanie funkcji do przycisku Home
+    Toggle := !Toggle ; Przełącz stan zmiennej Toggle
+    if (Toggle)
+    {
+        SetTimer, MoveMouse, 10 ; Uruchom funkcję MoveMouse co 10 milisekund
+    }
+    else
+    {
+        SetTimer, MoveMouse, Off ; Wyłącz funkcję MoveMouse
+    }
+return
+
+MoveMouse:
+    MouseMove, 5, 0, 10, R ; Przesuń myszkę o 5 pikseli w prawo i 5 pikseli w dół (tworząc ruch po okręgu)
+return
